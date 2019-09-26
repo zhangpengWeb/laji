@@ -1,0 +1,45 @@
+<image class='bg' src='../img/bg.png'></image>
+
+<view class='container'>
+    <view class='top'>
+        <text class='top-title'>你是什么垃圾</text>
+        <text class='top-more'>一键查询免烦恼，从我做起爱环保</text>
+    </view> 
+
+    <view class='search'>
+       <view class='search-main'>
+         <icon type='search' size='16'></icon>
+         <input 
+         placeholder="请输入查询的垃圾名称"
+         bindinput='iptDetails'
+         bindconfirm="search"
+         ></input>
+       </view>
+
+        <view class='search-end' wx:if='{{searchResultDatas.length > 0}}'>
+          <text 
+          wx:for='{{searchResultDatas}}'
+          wx:key='{{index}}'
+          bindtap='toDetails'
+          data-title='{{item.itemName}}'
+          >{{item.itemName}}</text>
+        </view>
+    </view>
+
+    <view class='hot'>
+        <view class='hot-main'>
+          <view class='hot-title'>热门搜索：</view>
+          <view class='hot-item'>
+
+              <text 
+                wx:for='{{hotSearch}}'
+                wx:key='{{index}}'
+                bindtap='toDetails'
+                data-title='{{item.itemName}}'
+              >{{item.itemName}}</text>
+             
+          </view>
+        </view>
+    </view>
+
+</view>

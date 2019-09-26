@@ -1,0 +1,25 @@
+<image class='bg' src='../img/bg.png'></image>
+
+<view class='details'>
+    <view class="end">
+       <text class='name'>{{item.itemName}}</text>
+       <text class='attr'>属性“{{item.itemCategory}}”</text>
+    </view>
+
+    <view class='details-more'>
+
+       <view class='more-title'>
+        {{item.itemCategory}}投放指导
+       </view>
+
+       <view class='more-title'>
+           <text>·尽量沥干水分</text>
+           <text>·难以辨别的生活垃圾应投入垃圾容器内</text>
+           <text>·餐巾纸、纸巾、纸尿裤等其他垃圾</text>
+       </view>
+
+    </view>
+
+    <button bindtap='toHome'>关闭</button>
+    
+</view>
